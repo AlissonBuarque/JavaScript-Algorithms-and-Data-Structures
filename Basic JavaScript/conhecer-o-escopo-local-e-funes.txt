@@ -1,0 +1,8 @@
+function myLocalScope() {
+  // Altere apenas o código abaixo desta linha
+var myVar = "luke"
+  console.log('inside myLocalScope', myVar);
+}
+ 
+myLocalScope();
+console.log('outside myLocalScope', myVar);
