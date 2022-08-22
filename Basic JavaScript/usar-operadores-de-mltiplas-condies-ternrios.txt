@@ -1,0 +1,10 @@
+function checkSign(num) {
+
+return (num > 0) ? "positive" 
+: (num < 0) ? "negative" 
+: "zero";
+}
+
+checkSign(10);
+
+// para verificar se um numero e positivo ou negativo, so e verificar se ele e maior ou menor que zero!
