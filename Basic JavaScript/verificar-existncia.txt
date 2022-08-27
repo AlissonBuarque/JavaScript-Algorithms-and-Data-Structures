@@ -1,0 +1,5 @@
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Altere esta linha
+let result = favRegex.test(favWord);
+
+// Ao acrescentar a letra, logo em seguida acrescenta-se o elemento ?

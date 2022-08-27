@@ -1,0 +1,5 @@
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Altere esta linha
+let result = text.match(myRegex);
+
+// Para soluçao da atividade o caractere coringa . foi importante para capturar qualquer caractere.
