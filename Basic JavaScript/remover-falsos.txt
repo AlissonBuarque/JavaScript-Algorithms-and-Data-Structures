@@ -1,0 +1,7 @@
+function bouncer(arr) {
+   return arr.filter(Boolean);
+}
+
+bouncer([7, "ate", "", false, 9]);
+
+// O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.

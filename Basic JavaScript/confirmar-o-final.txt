@@ -1,0 +1,7 @@
+function confirmEnding(str, target) {
+  return str.slice(-target.length) === target
+}
+
+confirmEnding("Bastian", "n");
+
+// Se um número negativo for fornecido como o primeiro parâmetro para slice(), o deslocamento será revertido a partir do final da string.

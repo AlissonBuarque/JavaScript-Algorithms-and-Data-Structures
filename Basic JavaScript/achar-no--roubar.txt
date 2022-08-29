@@ -1,0 +1,7 @@
+function findElement(arr, func) {
+return arr.find(func);
+}
+
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+// O find() método retorna o primeiro elemento na matriz fornecida que satisfaça a função de teste fornecida. Se nenhum valor satisfizer a função de teste, undefinedé retornado.

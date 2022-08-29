@@ -1,0 +1,13 @@
+function titleCase(str) {
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(val => val.replace(val.charAt(0), val.charAt(0).toUpperCase()))
+    .join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+// O método toUpperCase() retorna o valor da string original convertido em letras maiúsculas.
+// O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array.
+// O método join() junta todos os elementos de um array (ou um array-like object) em uma string e retorna esta string.
