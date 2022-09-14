@@ -1,0 +1,17 @@
+function dropElements(arr, func) {
+  let originalLen = arr.length;
+  for (let i = 0; i < originalLen; i++) {
+    if (func(arr[0])) {
+      break;
+      // O comando break encerra o loop atual, switch, ou o loop que foi informado no label e transfere o controle da execução do programa para o comando seguinte.
+    } else {
+      arr.shift();
+      // O método shift()remove o primeiro elemento de um array e retorna esse elemento. Este método muda o tamanho do array.
+    }
+  }
+  return arr;
+}
+
+dropElements([1, 2, 3, 4], function(n) {
+  return n >= 3;
+});

@@ -1,0 +1,11 @@
+function diffArray(arr1, arr2) {
+  return arr1
+    .concat(arr2)
+    // O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro
+    .filter(item => !arr1.includes(item) || !arr2.includes(item));
+    // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+
+    // O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+}
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);

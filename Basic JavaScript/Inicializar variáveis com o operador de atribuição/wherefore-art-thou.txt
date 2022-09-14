@@ -1,0 +1,24 @@
+function whatIsInAName(collection, source) {
+  const arr = [];
+  // Only change code below this line
+  const souceKeys = Object.keys(source);
+  // O método Object.keys() retorna um array de propriedades enumeraveis de um determinado objeto, na mesma ordem em que é fornecida por um laço for...in (a diferença é que um laço for-in enumera propriedades que estejam na cadeia de protótipos)
+
+  // filter the collection
+  return collection.filter(obj => {
+    // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+    for (let i = 0; i < souceKeys.length; i++) {
+      // A propriedade length de um objeto String contém o comprimento da string. length é uma propriedade read-only (somente leitura) de instâncias de string.
+      if (!obj.hasOwnProperty(souceKeys[i]) ||
+          obj[souceKeys[i]] !== source[souceKeys[i]]) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
