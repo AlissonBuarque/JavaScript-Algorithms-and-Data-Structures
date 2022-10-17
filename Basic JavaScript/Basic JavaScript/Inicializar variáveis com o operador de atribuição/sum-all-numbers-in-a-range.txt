@@ -1,0 +1,14 @@
+function sumAll(arr) {
+  let max = Math.max(arr[0], arr[1]);
+  // A função Math.max() retorna o maior de um ou mais números.
+  let min = Math.min(arr[0], arr[1]);
+  // A função Math.min() retorna o menor valor passado como parâmetro, ou NaN se o parâmetro não é ou não pode ser convertido para um número.
+  let sumBetween = 0;
+  for (let i = min; i <= max; i++) {
+    sumBetween += i;
+  }
+  return sumBetween;
+}
+
+sumAll([1, 4]);
+

@@ -1,0 +1,12 @@
+function myReplace(str, before, after) {
+  const strArr = str.split(" ");
+  // O método split() divide uma String em uma lista ordenada de substrings, coloca essas substrings em um array e retorna o array. A divisão é feita procurando um padrão, onde o padrão é fornecido como o primeiro parâmetro na chamada do método.
+  const [wordToReplace] = strArr.filter(item => item === before);
+  // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+  const replacement = wordToReplace[0] === wordToReplace[0].toUpperCase()
+    ? after[0].toUpperCase() + after.slice(1)
+    : after[0].toLowerCase() + after.slice(1);
+  return strArr.map(item => (item === before ? replacement : item)).join(" ");
+}
+
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");

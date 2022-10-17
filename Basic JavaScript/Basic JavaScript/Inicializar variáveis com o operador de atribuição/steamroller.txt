@@ -1,0 +1,8 @@
+function steamrollArray(arr) {
+  const flat = [].concat(...arr);
+  // O método concat() retorna um novo array contendo todos os arrays ou valores passados como parâmetro
+  return flat.some(Array.isArray) ? steamrollArray(flat) : flat;
+  // O método flat() cria um novo array com todos elementos sub-arrays concatenados nele de forma recursiva até a profundidade especificada.
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);

@@ -1,0 +1,16 @@
+function destroyer(arr) {
+  const valsToRemove = Array.from(arguments).slice(1);
+  // O método Array.from() cria uma nova instância de um Array quando for passado um array-like ou um iterable object como argumento. No ES6, a sintaxe de classe permite a subclassificação de classes nativas e classes definidas pelo usuário; como resultado, os métodos estáticos pertencentes a classe, como Array.from, são "herdadas" por subclasses do Array e criam novas instâncias da subclasse, não do Array.
+
+  // O objeto arguments é como um objeto Array correspondendo aos argumentos passados para uma função.
+
+  // O método slice() retorna uma cópia de parte de um array a partir de um subarray criado entre as posições início e fim (fim não é necessário) de um array original. O Array original não é modificado.
+  
+  return arr.filter(function(val) {
+    // O método filter() cria um novo array com todos os elementos que passaram no teste implementado pela função fornecida.
+
+    return !valsToRemove.includes(val);
+    // O método includes() determina se um array contém um determinado elemento, retornando true ou false apropriadamente.
+  });
+}
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
